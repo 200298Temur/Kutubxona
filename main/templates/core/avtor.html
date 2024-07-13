@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method='post'>
+        {% for post in posts %}
+            <p style="text-align: center;background-color:#333; color:#fff; font-size:18px; padding:10px; border-radius:4px; margin-top:10px;">
+                <a href="{% url 'showavtor' post.slug %}" style="color:#fff; text-decoration:none;">{{ post.name }}</a>
+            </p>
+        {% endfor %}
+    </form>
+{% endblock content %}
+
+
+{% block navigation %}
+<nav>
+    {% if page_obj.has_previous %}
+        <a style="color:white;" href="?page={{ page_obj.previous_page_number }}">&lt;</a>
+    {% endif %}
+
+    {% for p in paginator.page_range %}
+        <a style="color:white; margin-left:5px;" href="?page={{ p }}">{{ p }}</a>
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+        <a style="color:white;" href="?page={{ page_obj.next_page_number }}">&gt;</a>
+    {% endif %}
+</nav>
+{% endblock navigation %}

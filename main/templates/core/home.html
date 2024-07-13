@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form style="text-align: center;">
+        {% for post in posts %}
+            <p style=" background-color:blue;" class="post-name">{{ post.name }}</p>
+            <p>Muallif: {{ post.author }}</p>
+            {% if post.photo %}
+                <img style="max-width: 180px;" src="{{ post.photo.url }}" alt="{{ post.name }}">
+            {% endif %}
+            {% if post.file %}
+                <p><a style="color:red;" href="{{ post.file.url }}" download>Download File</a></p>
+            {% else %}
+                <p>No file available</p>
+            {% endif %}
+        {% endfor %}
+    </form>
+{% endblock content %}
+
+
+{% block navigation %}
+<nav>
+    {% if page_obj.has_previous %}
+        <a style="color:white;" href="?page={{ page_obj.previous_page_number }}">&lt;</a>
+    {% endif %}
+
+    {% for p in paginator.page_range %}
+        <a style="color:white; margin-left:5px;" href="?page={{ p }}">{{ p }}</a>
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+        <a style="color:white;" href="?page={{ page_obj.next_page_number }}">&gt;</a>
+    {% endif %}
+</nav>
+{% endblock navigation %}

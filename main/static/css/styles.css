@@ -1,0 +1,170 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* Header styles */
+.header {
+    background-color: #f8f8f8; /* Background color of the header */
+    padding: 10px 20px; /* Padding around the header */
+    display: flex; /* Flexbox for horizontal layout */
+    flex-direction: column; /* Stack title and nav vertically */
+    align-items: center; /* Center align items horizontally */
+}
+
+.header-title {
+    margin: 0 0 10px 0; /* Margin around the title */
+    text-align: center; /* Center align title text */
+}
+
+/* Navigation styles */
+.nav {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-between; /* Space between nav-links and auth-links */
+    width: 100%; /* Take full width of the header */
+    align-items: center; /* Center align items vertically */
+}
+
+.nav-links {
+    display: flex; /* Flexbox for horizontal layout */
+}
+
+.nav-link {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Link color */
+    padding: 5px 10px; /* Padding for links */
+    border-radius: 3px; /* Rounded corners for links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+    background-color: #ddd; /* Background color on hover */
+}
+
+/* Authentication links styles */
+.auth-links {
+    margin: 0; 
+    text-align: right;/* Remove default margin */
+}
+
+.auth-links a {
+    margin-left: 10px; /* Space between login and registration links */
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 15%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-title {
+    margin-top: 0;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-item {
+    margin-bottom: 10px;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar-link:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+.main {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    flex: 1;
+}
+
+/* Footer styles */
+
+
+.footer-text {
+    margin: 0;
+}
+
+/* Author details styles */
+.author-details h2 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Book photo styles */
+.book-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Book download link styles */
+.book-download {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    font-size: larger;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.book-download:hover {
+    background-color: #218838;
+}
+
+/* ----------- */
+
+/* styles.css */
+
+.footer {
+    width: 100%;
+    background-color: #333; /* Or any background color of your choice */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer a {
+    color: white; /* Ensure the text color is visible */
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
